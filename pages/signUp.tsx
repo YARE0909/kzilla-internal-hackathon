@@ -32,10 +32,10 @@ export default function SignIn() {
             <div>
                 <h1 className={"text-5xl"}>Welcome Back</h1>
             </div>
-            <form className={"w-1/4 p-4 rounded-lg border-white border-2 flex flex-col gap-5"} onSubmit={handleSubmit}>
+            <form className={"w-1/4 p-4 rounded-lg border-[1px] border-[#909099] flex flex-col gap-5"} onSubmit={handleSubmit}>
                 <div className={"flex flex-col gap-2"}>
                     <label htmlFor="email">Email</label>
-                    <input className={"text-white px-4 py-2 border-2 border-white rounded-lg bg-transparent"}
+                    <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            placeholder={"funnyguy69@gmail.com"}
                            type="email" id="email" value={email}
@@ -43,7 +43,7 @@ export default function SignIn() {
                 </div>
                 <div className={"flex flex-col gap-2"}>
                     <label htmlFor="email">UserName</label>
-                    <input className={"text-white px-4 py-2 border-2 border-white rounded-lg bg-transparent"}
+                    <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            placeholder={"JoeMama69"}
                            type="text" id="email" value={userName}
@@ -51,7 +51,7 @@ export default function SignIn() {
                 </div>
                 <div className={"flex flex-col gap-2"}>
                     <label htmlFor="email">Display Name</label>
-                    <input className={"text-white px-4 py-2 border-2 border-white rounded-lg bg-transparent"}
+                    <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            placeholder={"Ben Dover"}
                            type="text" id="email" value={displayName}
@@ -59,17 +59,20 @@ export default function SignIn() {
                 </div>
                 <div className={"flex flex-col gap-2"}>
                     <label htmlFor="password">Password</label>
-                    <input className={"text-white px-4 py-2 border-2 border-white rounded-lg bg-transparent"}
+                    <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            type="password" id="password" value={password}
                            placeholder={"********"}
                            onChange={(e) => setPassword(e.target.value)}/>
                 </div>
-                <div className={"flex gap-2"}>
-                    <button className={"text-white px-4 py-2 border-2 border-white rounded-lg bg-transparent"}>Sign Up
+                <div className={"flex flex-col gap-2"}>
+                    <button
+                        className={"text-black w-full py-2 rounded-lg bg-white flex justify-center"}>Sign
+                        Up
                     </button>
-                    <Link href={"/signIn"}
-                          className={"text-white px-4 py-2 border-2 border-white rounded-lg bg-transparent"}>Sign In
+                    <Link href={"/signUp"}
+                          className={"text-black w-full py-2 rounded-lg bg-white flex justify-center"}>Sign
+                        In
                     </Link>
                 </div>
             </form>
