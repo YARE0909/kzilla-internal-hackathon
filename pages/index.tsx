@@ -52,7 +52,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         }
     }
     // Fetch user data from /api/getUserData
-    const userResponse = await fetch("http://localhost:3000/api/getUserData", {
+    const userResponse = await fetch(`${process.env.BE_URL}/api/getUserData`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         }
     )
 
-    const postsResponse = await fetch("http://localhost:3000/api/getPosts", {
+    const postsResponse = await fetch(`${process.env.BE_URL}/api/getPosts`, {
         method: "POST",
     })
 
