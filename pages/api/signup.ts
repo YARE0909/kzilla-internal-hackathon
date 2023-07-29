@@ -2,13 +2,9 @@ import type {NextApiRequest, NextApiResponse} from 'next'
 import Prisma from "@/utils/prisma";
 
 
-type Data = {
-    message: string
-}
-
 export default async function handler(
     req: NextApiRequest,
-    res: NextApiResponse<Data>
+    res: NextApiResponse
 ) {
     const {
         email: _email,
@@ -39,6 +35,6 @@ export default async function handler(
         })
         return res.status(200).send({message: "User created successfully"})
     } catch (e) {
-        res.status(500).send({message: "Something went wrong"})
+        res.status(500).send({message: "Something went wrong", error: e})
     }
 }

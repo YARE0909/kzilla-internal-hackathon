@@ -1,14 +1,10 @@
 import type {NextApiRequest, NextApiResponse} from 'next'
 import Prisma from "@/utils/prisma";
 
-type Data = {
-    message: string;
-    token?: string;
-}
 
 export default async function handler(
     req: NextApiRequest,
-    res: NextApiResponse<Data>
+    res: NextApiResponse
 ) {
     const {email: _email, password: _password} = req.body;
     if (!_email || !_password) {
@@ -33,6 +29,6 @@ export default async function handler(
             return res.status(200).send({message: "Logged in successfully", token: user.id});
         }
     } catch (e) {
-        res.status(500).send({message: "Something went wrong"})
+        res.status(500).send({message: "Something went wrong", error: e})
     }
 }
