@@ -3,7 +3,6 @@ import nookies from 'nookies'
 import Navbar from "@/components/Navbar";
 
 export default function Home({user, posts}: any) {
-    console.log(posts);
     return (
         //   TODO: Add home page
         <div className={"w-full min-h-screen h-fit flex flex-col"}>
@@ -32,7 +31,8 @@ export default function Home({user, posts}: any) {
                     }) : (
                         <div className={"w-full h-full"}>
                             <h1 className={"text-xl text-[#909099] font-bold"}>No posts found :(</h1>
-                            <h1 className={"text-xl text-[#909099] font-bold"}>Why don&apos;t you tYeet something? :)</h1>
+                            <h1 className={"text-xl text-[#909099] font-bold"}>Why don&apos;t you tYeet something?
+                                :)</h1>
                         </div>
                     )}
                 </div>
@@ -45,6 +45,7 @@ export default function Home({user, posts}: any) {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const cookies = nookies.get(ctx)
+    console.log({cookies});
     if (!cookies.token || cookies.token === "null" || cookies.token === "undefined") {
         return {
             redirect: {
@@ -58,7 +59,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "userId": cookies.token
+                "Authorization": cookies.token
             }
         }
     )

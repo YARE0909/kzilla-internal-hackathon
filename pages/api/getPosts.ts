@@ -20,8 +20,8 @@ export default async function handler(
                 }
             }
         });
-        const posts = await response;
-        res.status(200).json(posts);
+        const posts = response;
+        res.status(200).json(posts.reverse());
     } catch (e) {
         console.log(e);
         res.status(500).json({error: e})
