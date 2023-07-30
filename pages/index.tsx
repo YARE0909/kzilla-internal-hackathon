@@ -51,7 +51,6 @@ export default function Home({user, posts}: any) {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const cookies = nookies.get(ctx)
-    console.log({cookies});
     if (!cookies.token || cookies.token === "null" || cookies.token === "undefined") {
         return {
             redirect: {

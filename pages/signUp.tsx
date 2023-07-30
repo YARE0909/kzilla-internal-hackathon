@@ -38,7 +38,7 @@ export default function SignIn() {
                         className={"font-specialAlphabet"}>X</span></h1>
                 </div>
                 <div className={"flex flex-col gap-2"}>
-                    <label htmlFor="email">Email</label>
+                    <label className={"font-bold"} htmlFor="email">Email</label>
                     <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            placeholder={"funnyguy69@gmail.com"}
@@ -46,23 +46,23 @@ export default function SignIn() {
                            onChange={(e) => setEmail(e.target.value)}/>
                 </div>
                 <div className={"flex flex-col gap-2"}>
-                    <label htmlFor="email">UserName</label>
+                    <label className={"font-bold"} htmlFor="userName">UserName</label>
                     <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            placeholder={"JoeMama69"}
-                           type="text" id="email" value={userName}
+                           type="text" id="userName" value={userName}
                            onChange={(e) => setUserName(e.target.value)}/>
                 </div>
                 <div className={"flex flex-col gap-2"}>
-                    <label htmlFor="email">Display Name</label>
+                    <label className={"font-bold"} htmlFor="displayName">Display Name</label>
                     <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            placeholder={"Ben Dover"}
-                           type="text" id="email" value={displayName}
+                           type="text" id="displayName" value={displayName}
                            onChange={(e) => setDisplayName(e.target.value)}/>
                 </div>
                 <div className={"flex flex-col gap-2"}>
-                    <label htmlFor="password">Password</label>
+                    <label className={"font-bold"} htmlFor="password">Password</label>
                     <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            type="password" id="password" value={password}

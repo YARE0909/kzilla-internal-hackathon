@@ -45,7 +45,7 @@ export default function SignIn() {
                         className={"font-specialAlphabet"}>Y</span></h1>
                 </div>
                 <div className={"flex flex-col gap-2"}>
-                    <label htmlFor="email">Email</label>
+                    <label className={"font-bold"} htmlFor="email">Email</label>
                     <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            placeholder={"funnyguy69@gmail.com"}
@@ -53,7 +53,7 @@ export default function SignIn() {
                            onChange={(e) => setEmail(e.target.value)}/>
                 </div>
                 <div className={"flex flex-col gap-2"}>
-                    <label htmlFor="password">Password</label>
+                    <label className={"font-bold"} htmlFor="password">Password</label>
                     <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            type="password" id="password" value={password}

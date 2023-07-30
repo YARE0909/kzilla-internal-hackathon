@@ -49,12 +49,14 @@ export default function Post() {
             </div>
             <div className={"w-full h-full p-8 flex flex-col gap-10"}>
                 <div className={"flex flex-col gap-2"}>
-                    <h1 className={"text-4xl md:text-7xl font-semibold"}>New tYeet</h1>
-                    <h1 className={"text-[#909099] md:ml-1"}>tYeet something dank to the world</h1>
+                    <h1 className={"text-4xl md:text-7xl font-semibold"}>New t<span
+                        className={"font-specialAlphabet"}>Y</span>eet</h1>
+                    <h1 className={"text-[#909099] md:ml-1"}>t<span
+                        className={"font-specialAlphabet"}>Y</span>eet something dank to the world</h1>
                 </div>
                 <form className={"w-full md:w-1/2 flex flex-col gap-5"} onSubmit={handleSubmit}>
                     <div className={"flex flex-col gap-2"}>
-                        <label htmlFor="title">Title</label>
+                        <label className={"font-bold"} htmlFor="title">Title</label>
                         <input
                             className={"text-white px-4 py-2 outline-0 bg-transparent"}
                             required={true}
@@ -63,7 +65,7 @@ export default function Post() {
                             onChange={(e) => setTitle(e.target.value)}/>
                     </div>
                     <div className={"flex flex-col gap-2"}>
-                        <label htmlFor="content">Content</label>
+                        <label className={"font-bold"} htmlFor="content">Content</label>
                         <textarea
                             className={"text-white px-4 py-2 outline-0 bg-transparent w-full h-auto resize-none"}
                             required={true}
