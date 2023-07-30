@@ -1,6 +1,7 @@
 import {GetServerSideProps} from "next";
 import nookies from 'nookies'
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home({user, posts}: any) {
     return (
@@ -36,6 +37,9 @@ export default function Home({user, posts}: any) {
                         </div>
                     )}
                 </div>
+            </div>
+            <div>
+                <Footer/>
             </div>
         </div>
     )

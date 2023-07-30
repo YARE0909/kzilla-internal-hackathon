@@ -64,7 +64,7 @@ export default function SignIn() {
                     <input className={"text-white px-4 py-2 border-[1px] border-[#909099] rounded-lg bg-transparent"}
                            required={true}
                            type="password" id="password" value={password}
-                           placeholder={"********"}
+                           placeholder={"(candice)"}
                            onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <div className={"flex flex-col gap-2"}>
