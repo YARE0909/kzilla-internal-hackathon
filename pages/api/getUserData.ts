@@ -5,11 +5,14 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
-    const {userId} = req.headers;
+    const {authorization: userId} = req.headers;
+    if (!userId) {
+        return res.status(401).send({error: "Provide a userId"});
+    }
     try {
-        const response = await Prisma.getInstance().user.findFirst({
+        const response = await Prisma.getInstance().user.findUnique({
             where: {
-                id: userId as string
+                id: userId
             },
             select: {
                 id: true,
