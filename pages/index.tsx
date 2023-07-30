@@ -15,7 +15,7 @@ export default function Home({user, posts}: any) {
                     <h1 className={"text-[#909099] md:ml-1"}>Here are some dank tYeets</h1>
                 </div>
                 <div className={"w-full lg:w-1/2 flex flex-col gap-1"}>
-                    {posts.length !== 0 ? posts.reverse().map((post: any) => {
+                    {posts.length !== 0 ? posts.map((post: any) => {
                         return (
                             <div key={post.id}
                                  className={"p-4 border-b border-[#2f3336] my-2 flex flex-col gap-2"}>
