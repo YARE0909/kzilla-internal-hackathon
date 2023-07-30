@@ -36,8 +36,8 @@ export default function SignIn() {
     }
 
     return (
-        <div className={"w-full min-h-screen h-fit flex flex-col gap-5 items-center justify-center"}>
-            <form className={"w-1/4 p-8 rounded-lg border-[1px] border-[#909099] flex flex-col gap-5"}
+        <div className={"w-full min-h-screen h-fit flex flex-col gap-5 items-center justify-center p-4"}>
+            <form className={"w-full lg:w-96 p-8 rounded-lg border-[1px] border-[#909099] flex flex-col gap-5"}
                   onSubmit={handleSubmit}>
                 <div className={"flex flex-col gap-2"}>
                     <h1 className={"text-3xl font-semibold"}>Welcome Back</h1>

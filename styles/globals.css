@@ -25,6 +25,10 @@ body {
     ) rgb(var(--background-start-rgb));
 }
 
+body {
+    @apply font-Raleway;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
     background-color: gray;
@@ -33,4 +37,10 @@ body {
 ::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 10px;
+}
+
+.gridClass {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }

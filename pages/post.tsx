@@ -1,7 +1,8 @@
 import {useRouter} from "next/router";
 import {useState} from "react";
-import {parseCookies} from "nookies";
+import nookies, {parseCookies} from "nookies";
 import Navbar from "@/components/Navbar";
+import {GetServerSideProps} from "next";
 
 export default function Post() {
     const router = useRouter();
@@ -48,8 +49,8 @@ export default function Post() {
             </div>
             <div className={"w-full h-full p-8 flex flex-col gap-10"}>
                 <div className={"flex flex-col gap-2"}>
-                    <h1 className={"text-4xl md:text-7xl font-semibold"}>Create a new post</h1>
-                    <h1 className={"text-[#909099] md:ml-1"}>Say something dank to the world</h1>
+                    <h1 className={"text-4xl md:text-7xl font-semibold"}>New tYeet</h1>
+                    <h1 className={"text-[#909099] md:ml-1"}>tYeet something dank to the world</h1>
                 </div>
                 <form className={"w-full md:w-1/2 flex flex-col gap-5"} onSubmit={handleSubmit}>
                     <div className={"flex flex-col gap-2"}>
@@ -73,12 +74,25 @@ export default function Post() {
                         />
                     </div>
                     <div className={"flex flex-col gap-2 absolute bottom-2 left-2 right-2"}>
-                        <button className={"px-4 py-2 rounded-lg bg-white text-black font-semibold"}>Create
-                            Post
-                        </button>
+                        <button className={"px-4 py-2 rounded-lg bg-white text-black font-semibold"}>tYeet</button>
                     </div>
                 </form>
             </div>
         </div>
     )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+    const cookies = nookies.get(ctx)
+    if (!cookies.token || cookies.token === "null" || cookies.token === "undefined") {
+        return {
+            redirect: {
+                destination: '/signIn',
+                permanent: false
+            }
+        }
+    }
+    return {
+        props: {}
+    }
 }
