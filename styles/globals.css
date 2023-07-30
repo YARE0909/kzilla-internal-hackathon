@@ -38,9 +38,3 @@ body {
     background-color: white;
     border-radius: 10px;
 }
-
-.gridClass {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
