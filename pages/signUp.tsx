@@ -32,8 +32,10 @@ export default function SignIn() {
             <form className={"w-full lg:w-96 p-8 rounded-lg border-[1px] border-[#909099] flex flex-col gap-5"}
                   onSubmit={handleSubmit}>
                 <div className={"flex flex-col gap-2"}>
-                    <h1 className={"text-3xl font-semibold"}>Welcome To Y!</h1>
-                    <h1 className={"text-[#909099]"}>The ultimate rival of X</h1>
+                    <h1 className={"text-3xl font-semibold"}>Welcome To <span
+                        className={"font-specialAlphabet"}>Y</span>!</h1>
+                    <h1 className={"text-[#909099]"}>The ultimate rival of <span
+                        className={"font-specialAlphabet"}>X</span></h1>
                 </div>
                 <div className={"flex flex-col gap-2"}>
                     <label htmlFor="email">Email</label>

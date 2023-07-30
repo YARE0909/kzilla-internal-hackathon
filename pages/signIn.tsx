@@ -41,7 +41,8 @@ export default function SignIn() {
                   onSubmit={handleSubmit}>
                 <div className={"flex flex-col gap-2"}>
                     <h1 className={"text-3xl font-semibold"}>Welcome Back</h1>
-                    <h1 className={"text-[#909099]"}>Enter your credentials to Y</h1>
+                    <h1 className={"text-[#909099]"}>Enter your credentials to <span
+                        className={"font-specialAlphabet"}>Y</span></h1>
                 </div>
                 <div className={"flex flex-col gap-2"}>
                     <label htmlFor="email">Email</label>

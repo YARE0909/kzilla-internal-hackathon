@@ -13,7 +13,8 @@ export default function Home({user, posts}: any) {
             <div className={"p-8 flex flex-col gap-5"}>
                 <div className={"flex flex-col gap-2"}>
                     <h1 className={"text-4xl md:text-7xl font-semibold"}>Hello {user.displayName}</h1>
-                    <h1 className={"text-[#909099] md:ml-1"}>Here are some dank tYeets</h1>
+                    <h1 className={"text-[#909099] md:ml-1"}>Here are some dank t<span
+                        className={"font-specialAlphabet"}>Y</span>eets</h1>
                 </div>
                 <div className={"w-full lg:w-1/2 flex flex-col gap-1"}>
                     {posts.length !== 0 ? posts.map((post: any) => {
@@ -32,7 +33,8 @@ export default function Home({user, posts}: any) {
                     }) : (
                         <div className={"w-full h-full"}>
                             <h1 className={"text-xl text-[#909099] font-bold"}>No posts found :(</h1>
-                            <h1 className={"text-xl text-[#909099] font-bold"}>Why don&apos;t you tYeet something?
+                            <h1 className={"text-xl text-[#909099] font-bold"}>Why don&apos;t you t<span
+                                className={"font-specialAlphabet"}>Y</span>eet something?
                                 :)</h1>
                         </div>
                     )}

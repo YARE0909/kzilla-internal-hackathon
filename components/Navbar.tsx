@@ -4,10 +4,10 @@ import Home from "remixicon-react/Home2FillIcon"
 import Sun from "remixicon-react/SunFillIcon"
 import LogOut from "remixicon-react/LogoutCircleLineIcon"
 import {destroyCookie} from "nookies";
-import { useRouter } from 'next/navigation'
+import {useRouter} from 'next/navigation'
 
 export default function Navbar() {
-        const router = useRouter()
+    const router = useRouter()
     const handleLogout = async () => {
         destroyCookie(null, 'token')
         router.push("/signIn")
@@ -15,7 +15,7 @@ export default function Navbar() {
     return (
         <div className={"w-full h-[90px] border-b-[1px] border-white flex justify-between items-center p-4 lg:p-8"}>
             <div>
-                <h1 className={"text-4xl font-bold"}>Y</h1>
+                <h1 className={"text-4xl font-bold font-specialAlphabet"}>Y</h1>
             </div>
             <div className={"flex gap-10"}>
                 <Link
