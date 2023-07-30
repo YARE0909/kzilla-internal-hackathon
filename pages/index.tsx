@@ -32,7 +32,7 @@ export default function Home({user, posts}: any) {
                     }) : (
                         <div className={"w-full h-full"}>
                             <h1 className={"text-xl text-[#909099] font-bold"}>No posts found :(</h1>
-                            <h1 className={"text-xl text-[#909099] font-bold"}>Why don't you tYeet something? :)</h1>
+                            <h1 className={"text-xl text-[#909099] font-bold"}>Why don&apos;t you tYeet something? :)</h1>
                         </div>
                     )}
                 </div>
